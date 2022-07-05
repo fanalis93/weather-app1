@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400&family=Source+Code+Pro&display=swap");
+* {
+  font-family: "Fredoka", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #222;
+  background-image: url("https://source.unsplash.com/1600x900/?japan");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.card {
+  background-color: rgb(0 0 0 / 83%);
+  color: #fff;
+  padding: 2em;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 420px;
+  margin: 1em;
+}
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search button {
+  margin: 0.5em;
+  border: none;
+  outline: none;
+  border-radius: 1em;
+  height: 2.5em;
+  width: 2.5em;
+  background-color: rgb(165, 76, 76);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.search button:hover {
+  background: #7c7c7c;
+}
+.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.8em 1em;
+  border-radius: 15px;
+  background: #7c7c7c7c;
+  color: white;
+  font-family: inherit;
+  font-size: 110%;
+  width: calc(100% - 100px);
+}
+h1.temp {
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+.flexDesc {
+  display: flex;
+  align-items: center;
+}
+.description {
+  text-transform: capitalize;
+  margin-left: 8px;
+  font-size: 1.2em;
+}
+.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+.loading::after {
+  visibility: visible;
+  font-family: "Font Awesome 6 Free";
+  font-size: 1.5em;
+  font-weight: 600;
+  content: "\f5d2";
+  /* content: "Loading..."; */
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
