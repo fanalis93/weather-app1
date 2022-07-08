@@ -22,7 +22,7 @@ let weather = {
     document.querySelector(".wind").innerText = "Wind: " + speed + "m/s";
     document.querySelector(".weather").classList.remove("loading");
     document.body.style.backgroundImage =
-      "url('https://source.unsplash.com/1600x900/?" + name + "')";
+      "url('https://source.unsplash.com/1920x1080/?" + name + "')";
   },
   search() {
     this.fetchWeather(document.querySelector(".search-bar").value);
